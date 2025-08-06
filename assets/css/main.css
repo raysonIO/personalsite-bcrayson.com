@@ -28,14 +28,15 @@ body {
   font: 300 100% 'Helvetica Neue', Helvetica, Arial;
 }
 
-.container1 {
-  width: 50%;
+.flex-container1 {
+  width: 40%;
   margin: 0 auto;
 }
 
 ul li {
   display: inline;
   text-align: center;
+  
 }
 
 a {
@@ -48,7 +49,7 @@ a {
 }
 
 .two:hover ~ hr {
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 .three:hover ~ hr {
@@ -68,3 +69,7 @@ hr {
   transition: .3s ease-in-out;
 }
 
+#PDFcanvas {
+  border: 1px solid black;
+  direction: ltr;
+}
