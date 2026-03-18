@@ -20,6 +20,7 @@ h1 {
 }
 
 .container {
+  
             max-width: 1000px;
             margin: 0 auto;
         }
@@ -184,7 +185,32 @@ section {
             border-radius: 20px;
             font-size: 0.85rem;
             margin-top: 0.5rem;
+            margin-right: 0.3rem;
         }
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .summary {
+        padding: 2rem 1rem; /* Reduce padding on mobile */
+    }
+
+    .titlename h1 {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+}
 
 nav {
             background: #1a1a1a;
@@ -199,23 +225,35 @@ nav {
             gap: 5rem;
             flex-wrap: wrap;
             white-space: nowrap;
+            margin: 0;
+            padding: 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             transition: all 0.3s ease;
             border-radius: 5px;
-        }
+            display: inline-block;
+            cursor: pointer; /* Proper cursor */
+            width: auto; /* Override the 35% width from generic a */
+}
 
         nav a:hover {
             background: #333;
             color: #fff;
+            transform: translateY(-2px);
+        }
+        nav a:active {
+            transform: translateY(0);
         }
 
+
 nav ul li {
-    font-size: 22px;      /* increase text size */
-    padding: 0.5rem 1rem; /* increases the clickable area */
+    display: inline-block; /* Override the generic li style */
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
 }
