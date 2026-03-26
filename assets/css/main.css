@@ -36,6 +36,10 @@ body {
   font: 300 100% 'Helvetica Neue', Helvetica, Arial;
 }
 
+nav a.active {
+            background: #667eea;
+}
+
 .flex-container1 {
   width: 40%;
   margin: 0 auto;
