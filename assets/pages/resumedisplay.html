@@ -11,16 +11,31 @@
         <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="projects.html">Blog & Projects</a></li>
-            <li><a href="assets/pages/resumedisplay.html" class="active">Resume</a></li>
-            <li><a href="assets/pages/contactme.html">Contact Me</a></li>
+            <li><a href="resumedisplay.html" class="active">Resume</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
         </ul>
     </nav>
-    <h1>My Resume</h1>
+    <h1>Resume</h1>
     <p class="download">
         <a href="assets\documents\Resume.pdf" download>Download PDF</a>
     </p>
     
-    <iframe src="C:\Users\BcRay\Coding\personalsite-bcrayson.com\assets\documents\Resume.pdf" title="Resume"></iframe>
-    <iframe src="http://docs.google.com/gview?url=assets\documents\Resume.pdf style="width:600px; height:500px;" frameborder="0"></iframe>
+    <!-- <object data="assets/documents/Resume.pdf" type="application/pdf" width="100%" height="500vh" style="min-height:90vh;">
+                <p>PDF could not be displayed. <a href="assets/documents/Resume.pdf" download>Download it here.</a></p>
+
+    </object>
+    -->
+
+    <div id="adobe-dc-view"></div>
+<script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+<script type="text/javascript">
+	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+		var adobeDCView = new AdobeDC.View({clientId: "77f0a044c7c548e7bacbf3604c5aac62", divId: "adobe-dc-view"});
+		adobeDCView.previewFile({
+			content:{location: {url: "Resume.pdf"}},
+			metaData:{fileName: "RResume.pdf"}
+		}, {});
+	});
+</script>
 </body>
 </html>
